@@ -1,4 +1,7 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "cleanUrls": true,
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -10,11 +13,24 @@
       ]
     },
     {
-      "source": "/(.*)\\.(ico|png|jpg|jpeg|webp|svg|css|js)",
+      "source": "/(.*)\\.(ico|png|jpg|jpeg|webp|svg|woff2?|ttf|css|js)",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
         }
       ]
     }
