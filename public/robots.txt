@@ -58,4 +58,4 @@ User-agent: CCBot
 Allow: /
 
 # Sitemap
-Sitemap: https://whitestonespa.in/sitemap.xml
+Sitemap: https://whitestonespa.com/sitemap.xml
